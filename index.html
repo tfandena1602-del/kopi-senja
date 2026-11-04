@@ -114,6 +114,34 @@
       cursor: pointer;
       font-size: 16px;
     }
+    .bungkus-table{
+      overflow-x: auto;
+    }
+    .tabel-harga{
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .tabel-harga caption {
+      padding: 8px;
+      font-size: 14px;
+    }
+    .tabel-harga th,
+    .tabel-harga td{
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--krem-tua);
+    }
+    .tabel-harga th{
+      background-color: var(--cokelat);
+      color: white;
+    }
+    
     @media (max-width: 1100px) {
       .navbar {
         flex-direction: column;
@@ -133,6 +161,7 @@
       <a href="#keunggulan">Keunggulan</a>
       <a href="#menu-kopi">Menu</a>
       <a href="#jam-buka">Jam Buka</a>
+      <a href="#harga">Harga</a>
       <a href="#kontak">Kontak</a>
       <a href="#pesan">Pesan</a>
     </div>
@@ -143,7 +172,7 @@
     <p>Biji pilihan, diseduh segar setiap hari.</p>
     <a class="tombol" href="#pesan">Pesan Sekarang</a>
   </header>
-
+<main>
   <section id="keunggulan">
     <h2>Kenapa Kopi Senja?</h2>
     <div class="grid">
@@ -165,10 +194,10 @@
   <section id="menu-kopi">
     <h2>Menu</h2>
     <div class="grid">
-      <div class="kartu"><h3>Espresso</h3><p>Rp18.000</p></div>
-      <div class="kartu"><h3>Kopi Susu</h3><p>Rp22.000</p></div>
-      <div class="kartu"><h3>Latte</h3><p>Rp25.000</p></div>
-      <div class="kartu"><h3>Cold Brew</h3><p>Rp28.000</p></div>
+      <article class="kartu"><h3>Espresso</h3><p>Rp18.000</p></article>
+      <article class="kartu"><h3>Kopi Susu</h3><p>Rp22.000</p></article>
+      <article class="kartu"><h3>Latte</h3><p>Rp25.000</p></article>
+      <article class="kartu"><h3>Cold Brew</h3><p>Rp28.000</p></article>
     </div>
   </section>
   <section id="jam-buka">
@@ -179,6 +208,27 @@
       <div class="kartu"><h3>Minggu</h3><p>10.00 - 20.00</p></div>
     </div>
   </section>
+      <section id="harga">
+        <h2>Daftar Harga</h2>
+        <div class="bungkus-table">
+          <table class="tabel-harga">
+            <caption>Harga per ukuran</caption>
+            <thead>
+              <tr>
+                <th>Minuman</th>
+                <th>Reguler</th>
+                <th>Large</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Espresso</td><td>Rp18.000</td><td>Rp22.000</td></tr>
+              <tr><td>Kopi Susu</td><td>Rp22.000</td><td>Rp26.000</td></tr>
+              <tr><td>Latte</td><td>Rp25.000</td><td>Rp29.000</td></tr>
+              <tr><td>Cold Brew</td><td>Rp28.000</td><td>Rp32.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
   <section id="pesan">
     <h2>Pesan Sekarang</h2>
     <form class="form-pesan">
@@ -202,7 +252,7 @@
       <button type="submit" class="tombol">Kirim Pesanan</button>
     </form>
   </section>
-
+</main>
   <footer id="kontak">
     <p>Kontak: tfandena1602@gmail.com</p>
   </footer>
