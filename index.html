@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Senja</title>
+  <style>
+    :root {
+      --cokelat: #6f4e37;
+      --cokelat-tua: #3b2a20;
+      --krem: #fdf6ec;
+      --krem-tua: #e8d5bf;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: arial, sans-serif;
+      background-color: var(--krem);
+      color: var(--cokelat-tua);
+      margin: 0;
+    }
+    .navbar {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--cokelat);
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 22px;  
+    }
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+    }
+    .hero {
+     text-align: center;
+     padding: 64px 16px;
+     background-color: var(--krem-tua);
+    }
+    .tombol{
+      display: inline-block;
+      background-color: var(--cokelat);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .tombol:hover{
+      background-color: var(--cokelat-tua);
+    }
+    section {
+      padding: 32px 24px;
+      scroll-margin-top: 90px;
+    }
+    section h2{
+      text-align: center;
+      margin-top: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .kartu {
+      background-color: white;
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .kartu:hover {
+      transform: translateY(-6px);
+    }
+    .kartu h3{
+      margin-top: 0;
+      color: var(--cokelat);
+    }
+    footer{
+      background-color: var(--cokelat);
+      color: white;
+      text-align: center;
+      padding: 24px;
+    }
+    .form-pesan {
+      max-width: 480px;
+      margin: 0 auto;
+      display: grid;
+      gap: 8px;
+    }
+    .form-pesan input,
+    .form-pesan select,
+    .form-pesan textarea{
+      padding: 10px;
+      border: 1px solid #d1bfa8;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+    .form-pesan button {
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    @media (max-width: 1100px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="logo">Kopi Senja</div>
+    <div class="menu">
+      <a href="#keunggulan">Keunggulan</a>
+      <a href="#menu-kopi">Menu</a>
+      <a href="#jam-buka">Jam Buka</a>
+      <a href="#kontak">Kontak</a>
+      <a href="#pesan">Pesan</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Secangkir Kopi untuk Sore Harimu</h1>
+    <p>Biji pilihan, diseduh segar setiap hari.</p>
+    <a class="tombol" href="#pesan">Pesan Sekarang</a>
+  </header>
+
+  <section id="keunggulan">
+    <h2>Kenapa Kopi Senja?</h2>
+    <div class="grid">
+     <div class="kartu">
+       <h3>Biji Pilihan</h3>
+       <p>Dipilih langsung dari petani lokal.</p>
+     </div>
+     <div class="kartu">
+       <h3>Diseduh Segar</h3>
+       <p>Setiap cangkir dibuat saat dipesan.</p>
+     </div>
+     <div class="kartu">
+       <h3>Harga Ramah</h3>
+       <p>Nikmat tanpa bikin dompet menangis.</p>
+     </div>
+    </div>
+  </section>
+
+  <section id="menu-kopi">
+    <h2>Menu</h2>
+    <div class="grid">
+      <div class="kartu"><h3>Espresso</h3><p>Rp18.000</p></div>
+      <div class="kartu"><h3>Kopi Susu</h3><p>Rp22.000</p></div>
+      <div class="kartu"><h3>Latte</h3><p>Rp25.000</p></div>
+      <div class="kartu"><h3>Cold Brew</h3><p>Rp28.000</p></div>
+    </div>
+  </section>
+  <section id="jam-buka">
+    <h2>Jam Buka</h2>
+    <div class="grid">
+      <div class="kartu"><h3>Senin - Jumat</h3><p>08.00 - 21.00</p></div>
+      <div class="kartu"><h3>Sabtu</h3><p>08.00 - 22.00</p></div>
+      <div class="kartu"><h3>Minggu</h3><p>10.00 - 20.00</p></div>
+    </div>
+  </section>
+  <section id="pesan">
+    <h2>Pesan Sekarang</h2>
+    <form class="form-pesan">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama" placeholder="Nama kamu" required>
+
+      <label for="minuman">Minuman</label>
+      <select id="minuman" name="minuman">
+        <option>Espresso</option>
+        <option>Kopi Susu</option>
+        <option>Latte</option>
+        <option>Cold Brew</option>
+      </select>
+
+      <label for="jumlah">Jumlah</label>
+      <input type="number" id="jumlah" name="jumlah" min="1" value="1">
+
+      <label for="catatan">Catatan</label>
+      <textarea id="catatan" name="catatan" rows="3" placeholder="Misal: kurang manis"></textarea>
+
+      <button type="submit" class="tombol">Kirim Pesanan</button>
+    </form>
+  </section>
+
+  <footer id="kontak">
+    <p>Kontak: tfandena1602@gmail.com</p>
+  </footer>
+
+</body>
+</html>
